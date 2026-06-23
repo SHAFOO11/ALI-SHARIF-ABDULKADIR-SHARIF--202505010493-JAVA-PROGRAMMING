@@ -1,3 +1,5 @@
+package tutorial_3;
+
 
 class Lecturer extends Person {
 
