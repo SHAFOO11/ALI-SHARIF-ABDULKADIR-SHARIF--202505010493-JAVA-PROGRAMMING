@@ -153,8 +153,10 @@ public class QuizBattleGUI extends JFrame {
             JButton btn = new JButton();
             btn.setFont(new Font("Consolas", Font.PLAIN, 14));
             btn.setFocusPainted(false);
-            btn.setBackground(new Color(45, 45, 65));
-            btn.setForeground(Color.WHITE);
+            Color btnBg = new Color(45, 45, 65);
+            btn.setBackground(btnBg);
+            int brightness = (int) (btnBg.getRed() * 0.299 + btnBg.getGreen() * 0.587 + btnBg.getBlue() * 0.114);
+            btn.setForeground(brightness < 128 ? Color.WHITE : Color.BLACK);
             btn.setOpaque(true);
             btn.setContentAreaFilled(true);
             btn.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
@@ -179,7 +181,10 @@ public class QuizBattleGUI extends JFrame {
         for (int i = 0; i < 4; i++) {
             optionButtons[i].setText((char) ('A' + i) + ". " + opts[i]);
             optionButtons[i].setEnabled(true);
-            optionButtons[i].setBackground(new Color(45, 45, 65));
+            Color bg = new Color(45, 45, 65);
+            optionButtons[i].setBackground(bg);
+            int b = (int) (bg.getRed() * 0.299 + bg.getGreen() * 0.587 + bg.getBlue() * 0.114);
+            optionButtons[i].setForeground(b < 128 ? Color.WHITE : Color.BLACK);
         }
     }
 
