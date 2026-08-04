@@ -155,6 +155,9 @@ public class QuizBattleGUI extends JFrame {
             btn.setFocusPainted(false);
             btn.setBackground(new Color(45, 45, 65));
             btn.setForeground(Color.WHITE);
+            btn.setOpaque(true);
+            btn.setContentAreaFilled(true);
+            btn.setBorder(BorderFactory.createEmptyBorder(12, 16, 12, 16));
             btn.addActionListener((ActionEvent e) -> handleAnswer(idx));
             optionButtons[i] = btn;
             optionsPanel.add(btn);
