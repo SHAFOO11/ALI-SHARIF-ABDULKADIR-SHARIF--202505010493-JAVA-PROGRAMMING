@@ -1,3 +1,5 @@
+package week_6;
+
 public class Lecturer extends Employee {
 
     private String subject;

@@ -1,4 +1,4 @@
-package tutorial_3;
+package week_3_4;
 
 public class Student extends Person {
 

@@ -1,3 +1,5 @@
+package week_2;
+
 public class Mean {
     public static void main(String[] args) {
         // coding starts here

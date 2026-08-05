@@ -1,3 +1,5 @@
+package week_2;
+
 // Attributes
 class Student   {
 String name;
