@@ -1,5 +1,3 @@
-package week_3_4;
-
 public class Student extends Person {
 
     public Student(String name, String id) {

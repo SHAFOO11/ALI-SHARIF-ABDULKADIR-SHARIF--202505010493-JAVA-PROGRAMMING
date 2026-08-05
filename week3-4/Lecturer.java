@@ -1,7 +1,4 @@
-package week_3_4;
-
-
-class Lecturer extends Person {
+public class Lecturer extends Person {
 
     public Lecturer(String name, String id) {
         super(name, id);
