@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.plaf.basic.BasicProgressBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.List;
@@ -49,7 +50,23 @@ public class QuizBattleGUI extends JFrame {
         add(buildBottomPanel(), BorderLayout.SOUTH);
 
         loadNextQuestion();
-        setVisible(true);
+    }
+
+    private static final String BOSS_ART =
+            "<html><pre>"
+            + "  ╔═══════════╗  \n"
+            + "  ║  ●     ●  ║  \n"
+            + "  ║           ║  \n"
+            + "  ║  ▄▄▄▄▄▄▄  ║  \n"
+            + "  ╚═══════════╝  \n"
+            + "    ▐███████▌    "
+            + "</pre></html>";
+
+    private static void styleBar(JProgressBar bar, Color fill, Color track) {
+        bar.setUI(new BasicProgressBarUI());
+        bar.setForeground(fill);
+        bar.setBackground(track);
+        bar.setBorderPainted(false);
     }
 
     private JPanel buildTopPanel() {
@@ -65,9 +82,7 @@ public class QuizBattleGUI extends JFrame {
         bossName.setFont(new Font("Consolas", Font.BOLD, 18));
         bossBar = new JProgressBar(0, BOSS_MAX_HP);
         bossBar.setValue(BOSS_MAX_HP);
-        bossBar.setForeground(new Color(220, 50, 50));
-        bossBar.setBackground(new Color(60, 20, 20));
-        bossBar.setBorderPainted(false);
+        styleBar(bossBar, new Color(220, 50, 50), new Color(60, 20, 20));
         bossHpText = new JLabel("HP: 100 / 100", SwingConstants.CENTER);
         bossHpText.setForeground(Color.WHITE);
         bossStats.add(bossName, BorderLayout.NORTH);
@@ -81,9 +96,7 @@ public class QuizBattleGUI extends JFrame {
         playerName.setFont(new Font("Consolas", Font.BOLD, 18));
         playerBar = new JProgressBar(0, PLAYER_MAX_HP);
         playerBar.setValue(PLAYER_MAX_HP);
-        playerBar.setForeground(new Color(50, 150, 220));
-        playerBar.setBackground(new Color(20, 30, 60));
-        playerBar.setBorderPainted(false);
+        styleBar(playerBar, new Color(50, 150, 220), new Color(20, 30, 60));
         playerHpText = new JLabel("HP: 100 / 100", SwingConstants.CENTER);
         playerHpText.setForeground(Color.WHITE);
         playerStats.add(playerName, BorderLayout.NORTH);
@@ -99,8 +112,9 @@ public class QuizBattleGUI extends JFrame {
         bossPanel = new JPanel(new BorderLayout());
         bossPanel.setBackground(new Color(20, 20, 30));
 
-        bossLabel = new JLabel("\uD83E\uDD16", SwingConstants.CENTER);
-        bossLabel.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 120));
+        bossLabel = new JLabel(BOSS_ART, SwingConstants.CENTER);
+        bossLabel.setFont(new Font(Font.MONOSPACED, Font.BOLD, 22));
+        bossLabel.setForeground(new Color(255, 120, 120));
 
         titleLabel = new JLabel("Defeat the Code Boss!", SwingConstants.CENTER);
         titleLabel.setForeground(new Color(200, 200, 220));
@@ -302,7 +316,7 @@ public class QuizBattleGUI extends JFrame {
         if (GraphicsEnvironment.isHeadless()) {
             runHeadless();
         } else {
-            SwingUtilities.invokeLater(QuizBattleGUI::new);
+            SwingUtilities.invokeLater(() -> new QuizBattleGUI().setVisible(true));
         }
     }
 
