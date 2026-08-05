@@ -1,0 +1,3 @@
+Complete OOP tutorial exercises
+Revise inheritance and polymorphism
+Prepare Assignment 1 submission
