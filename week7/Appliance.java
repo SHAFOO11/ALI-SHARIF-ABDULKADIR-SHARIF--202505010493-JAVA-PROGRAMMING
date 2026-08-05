@@ -1,5 +1,3 @@
-package week_7;
-
 public abstract class Appliance {
     protected String brand;
 

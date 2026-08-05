@@ -1,5 +1,3 @@
-package week_7;
-
 public class Main {
     public static void main(String[] args) {
         Appliance a1 = new WashingMachine("LG");
