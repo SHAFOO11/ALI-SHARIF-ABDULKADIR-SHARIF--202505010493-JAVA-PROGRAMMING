@@ -99,56 +99,56 @@ Folder naming follows a single consistent convention (`week1` … `week10`), wit
 
 ## Tutorial Summary (Week 1–10)
 
-### Week 1 — Java Fundamentals
+### Week 1 Java Fundamentals
 The entry point into Java: writing and compiling a first program, declaring variables of each primitive type, and using operators, conditionals and loops. `StudentGrade.java` applies these basics to a real task, looping over an array of subject marks, computing a total and average, and mapping each mark onto a letter grade through a reusable static method.
 
 **Concepts:** `main` method · primitive types · `String` · operators · `if`/`else` · `for` loops · arrays · static methods · `printf` formatting
 
 ---
 
-### Week 2 — Classes and Objects
+### Week 2 Classes and Objects
 The first step into object orientation. `Student` is defined as a blueprint with attributes, a constructor that initialises them, and behaviours expressed as instance methods. `Mean.java` then instantiates multiple `Student` objects to show that each carries its own independent state.
 
 **Concepts:** class definition · attributes · constructors · instance methods · object instantiation with `new`
 
 ---
 
-### Week 3–4 — Inheritance and Polymorphism
+### Week 3–4 Inheritance and Polymorphism
 A `Person` superclass is extended by `Student` and `Lecturer`, each overriding `introduce()` with its own implementation. `Main.java` stores all three as `Person` references and calls the same method on each — demonstrating that Java resolves the call against the actual object type at runtime, not the declared reference type.
 
 **Concepts:** `extends` · `super()` · method overriding · `@Override` · upcasting · runtime polymorphism (dynamic dispatch)
 
 ---
 
-### Week 5 — Encapsulation
+### Week 5 Encapsulation
 The `Student` class is rewritten with all fields marked `private` and access routed exclusively through public getters and setters. This tutorial makes the case for information hiding: internal representation stays under the class's control, and the public surface becomes a deliberate contract.
 
 **Concepts:** `private` fields · getters and setters · information hiding · `this` keyword
 
 ---
 
-### Week 6 — Inheritance with Protected Members
+### Week 6 Inheritance with Protected Members
 An `Employee` base class exposes `protected` fields so that its `Lecturer` subclass can use them directly, while they stay hidden from unrelated classes. The subclass adds its own state (`subject`, `department`) and its own methods on top of the inherited behaviour.
 
 **Concepts:** `protected` access · constructor chaining with `super` · extending inherited behaviour
 
 ---
 
-### Week 7 — Abstraction
+### Week 7 Abstraction
 `Appliance` is declared `abstract` with a concrete shared implementation (`turnOn`, `turnOff`, `displayBrand`) and one abstract method, `operate()`, that every subclass must define for itself. `WashingMachine`, `Refrigerator` and `AirConditioner` each supply their own behaviour, and `Main.java` drives them all through the common `Appliance` type.
 
 **Concepts:** `abstract` classes · abstract methods · enforced contracts · programming to a supertype
 
 ---
 
-### Week 8–9 — Collections, File I/O and Exception Handling
+### Week 8–9 Collections, File I/O and Exception Handling
 A task manager that reads user input with `Scanner`, stores entries in an `ArrayList<String>`, writes them to `task.txt` with a `BufferedWriter`, and reads them back with a `BufferedReader`. All file operations use try-with-resources so streams close automatically, and `IOException` is handled explicitly rather than allowed to crash the program.
 
 **Concepts:** `ArrayList` · generics · `Scanner` · `BufferedWriter` / `BufferedReader` · try-with-resources · `IOException` handling
 
 ---
 
-### Week 10 — Swing GUI Mini Project: *Code Boss Battle*
+### Week 10 Swing GUI Mini Project: *Code Boss Battle*
 The capstone tutorial — a complete event-driven desktop application that turns a Java quiz into a turn-based boss fight. Answering correctly damages the boss, with consecutive correct answers building a combo streak that raises the chance of a critical hit; a wrong answer costs the player HP.
 
 ![Code Boss Battle screenshot](week10/quiz_screenshot.png)
