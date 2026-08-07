@@ -52,6 +52,9 @@ ALI-SHARIF-ABDULKADIR-SHARIF--202505010493-JAVA-PROGRAMMING/
 ├── LICENSE                    MIT License
 ├── run_week10.sh              Helper script to compile and launch the Week 10 GUI
 │
+├── docs/
+│   └── Self-Reflective-Report.pdf    Self-reflective report on the learning journey
+│
 ├── week1/                     Java basics, variables, control flow
 │   ├── HelloWorld.java
 │   └── StudentGrade.java
@@ -238,6 +241,8 @@ Working through these ten tutorials changed how I approach writing code. The ear
 The concept that took longest to click was polymorphism. Writing the Week 3–4 exercise and watching three `Person` references each print a different message made the idea concrete in a way reading about it had not. Encapsulation in Week 5 felt like unnecessary overhead at first, until refactoring in later weeks showed how much easier a class is to change when nothing outside it depends on its internals.
 
 Week 10 was where the separate pieces became one system. Building *Code Boss Battle* required a model class, a view built from composed Swing components, event handling, and state that stays consistent as the user interacts — and every one of those needs traced back to something practised in an earlier week.
+
+📄 **The full self-reflective report is available at [`docs/Self-Reflective-Report.pdf`](docs/Self-Reflective-Report.pdf).**
 
 ---
 
